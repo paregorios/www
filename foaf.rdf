@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:admin="http://webns.net/mvcb/">
+    <foaf:PersonalProfileDocument rdf:about="">
+        <foaf:maker rdf:resource="#me"/>
+        <foaf:primaryTopic rdf:resource="#me"/>
+        <admin:generatorAgent rdf:resource="http://www.ldodds.com/foaf/foaf-a-matic"/>
+        <admin:errorReportsTo rdf:resource="mailto:leigh@ldodds.com"/>
+    </foaf:PersonalProfileDocument>
+    <foaf:Person rdf:about="http://paregorios.org/me">
+        <foaf:name>Tom Elliott</foaf:name>
+        <foaf:title>Dr.</foaf:title>
+        <foaf:givenname>Thomas</foaf:givenname>
+        <foaf:family_name>Elliott</foaf:family_name>
+        <foaf:nick>Tom</foaf:nick>
+        <foaf:mbox_sha1sum>2fcef8d755d94848d1e7b5f3fa7c916ddc61593d</foaf:mbox_sha1sum>
+        <foaf:homepage rdf:resource="http://paregorios.org"/>
+        <foaf:depiction rdf:resource="http://paregorios.org/image.jpg"/>
+        <foaf:workplaceHomepage rdf:resource="http://isaw.nyu.edu"/>
+        <foaf:workInfoHomepage rdf:resource="http://isaw.nyu.edu/people/staff/tom_elliott"/>
+        <foaf:schoolHomepage rdf:resource="http://www.randolphschool.net"/>
+        <foaf:schoolHomepage rdf:resource="http://www.duke.edu"/>
+        <foaf:schoolHomepage rdf:resource="http://www.unc.edu"/>
+        <foaf:knows>
+            <foaf:Person rdf:about="http://sgillies.net/me">
+                <foaf:name>Sean Gillies</foaf:name>
+                <rdfs:seeAlso rdf:resource="http://sgillies.net/foaf.rdf"/>
+            </foaf:Person>
+        </foaf:knows>
+    </foaf:Person>
+</rdf:RDF>
+
