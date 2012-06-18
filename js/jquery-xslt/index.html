@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>jQuery XSLT Plugin</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+</head>
+<body>
+
+<!-- Intro -->
+
+<a name="intro" />
+<h1>XSLT v0.70</h1>
+
+This is a jQuery Plugin for <a href="http://code.google.com/p/ajaxslt/">Google's AJAXSLT</a>. It gives you the
+ability to transform XML/XSL from JavaScript. AJAXSLT is a parser itself, the library does not depend on 
+your browser being able to do XSL transforms. The plugin also provides functionality to load XML/XSL through
+$.ajax() calls and transform them.<br />
+
+<!-- TOC -->
+
+<a name="toc" />
+<h1>Table of Contents</h1>
+
+<a href="#intro">XSLT</a><br />
+<a href="#toc">Table of Contents</a><br />
+<a href="#license">License</a><br />
+<a href="#license_plugin">- Plugin</a><br />
+<a href="#license_ajaxslt">- AJAXSLT</a><br />
+<a href="#download">Download</a><br />
+<a href="#demo">Demo</a><br />
+<a href="#reference">Reference</a><br />
+- <a href="#reference_version">$.xslt.version</a><br />
+- <a href="#reference_texttoxml">$.xslt.textToXML(text)</a><br />
+- <a href="#reference_xmltotext">$.xslt.xmlToText(xml)</a><br />
+- <A href="#reference_xslt">$.xslt(options)</a><br />
+- <a href="#reference_xslt_jq">$(...).xslt(options)</a><br />
+<a href="#notes">Notes</a><br />
+
+<!-- License -->
+
+<a name="license" />
+<h1>License</h1>
+This plugin is divided in two parts for licensing, even though it is a single file. It is clearly
+marked in the file where my code ends and Google's code begins.<br />
+
+<a name="license_plugin" />
+<h2>License - Plugin</h2>
+The part of the code that I made is under MIT or Public Domain license. Whichever suits your needs.<br />
+
+<a name="license_ajaxslt" />
+<h2>License - AJAXSLT</h2>
+The code for Google's AJAXSLT is incorporated in the file. This part of the code has the following license:<br />
+<pre>
+Copyright (c) 2005,2006 Google Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+        
+ * Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+
+ * Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the
+   distribution.
+
+ * Neither the name of Google Inc. nor the names of its contributors
+   may be used to endorse or promote products derived from this
+   software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</pre>
+
+<!-- Download -->
+
+<a name="download" />
+<h1>Download</h1>
+
+You can download the plugin below. The size of the file is about 115kb, but with JSMin it drops to 68kb,
+and JSMin+GZ drops it to a mere 15kb.<br />
+<br />
+<a href="../jquery.xslt.js">Download</a><br />
+
+<!-- Demo -->
+
+<a name="demo" />
+<h1>Demo</h1>
+
+This is one of the lamest demo's ever, but you can see it in action in the simplest way <a href="xslt-test.html">
+here</a>.<br />
+
+<!-- Reference -->
+
+<a name="reference" />
+<h1>Reference</h1>
+
+<a name="reference_version" />
+<h2>Reference - $.xslt.version</h2>
+
+Object with two members: <b>plugin</b> and <b>ajaxslt</b>.
+
+<a name="reference_texttoxml" />
+<h2>Reference - $.xslt.textToXML(text)</h2>
+
+Converts a text string containing XML to an XML node usable by AJAXSLT. Really just calls the <b>xmlParse</b>
+function from AJAXSLT. It only exists to provide a jQuery-like function for a common operation.<br />
+
+<a name="reference_xmltotext" />
+<h2>Reference - $.xslt.xmlToText(xml)</h2>
+
+Converts an XML node to a text string. Really just calls the <b>xmlText</b> function from AJAXSLT.
+It only exists to provide a jQuery-like function for a common operation.<br />
+
+<a name="reference_xslt" />
+<h2>Reference - $.xslt(options)</h2>
+
+This is the core of the XSLT plugin and together with the <b>$(...).xslt(options)</b> function probably
+all you need to use and know about.<br />
+<br />
+This function can take XML and XSL from text strings and XML nodes, if necessary retrieve them from the
+server through <b>$.ajax()</b> calls both synchronously and asynchronously, use AJAXSLT to do the 
+transformation and provide that back as return value or to a callback or assign it to DOM elements. It
+also provides caching.<br />
+<br />
+<b>Parameters</b><br />
+All parameters are passed through the <b>options</b> object. Members:
+<ul>
+	<li>
+		<b>xml</b> / <b>xsl</b> (<b>null</b>): A text string or XML/DOM node representing XML or XSL. Omit or set
+		to <b>null</b> to use the URL variants instead.<br />
+		<br />	
+	</li>
+	<li>
+		<b>xmlUrl</b> / <b>xslUrl</b> (<b>null</b>): URLs to retrieve the XML/XSL from. These are only used if the
+		<b>xml</b> or <b>xsl</b> members are set to <b>null</b>. Note that you can load one from an URL and provide
+		the other normally without issue.<br />
+		<br />		
+	</li>
+	<li>
+		<b>xmlCache</b> / <b>xslCache</b> (<b>true</b>): Use the internal cache? If set to <b>true</b> (default),
+		XML/XSL loaded externally through the <b>xmlUrl</b> and <b>xslUrl</b> members are saved to and loaded
+		from an internal cache. If set to <b>false</b>, this cache will not be used - note that the results will
+		also not be saved to the cache. Also note that if you set this to false, you still need to take measures
+		like sending the correct headers and maybe using a parameter in the URL to make sure the data is not
+		pulled from the browser cache.<br />
+		<br />
+	</li>
+	<li>
+		<b>callback</b> (<b>null</b>): Function to call when the transformation is complete. The callback function
+		is passed one parameter: the transformed data (as a text string). The parameter will be <b>false</b> if
+		an error has occured.<br />
+		<br />
+	</li>
+	<li>
+		<b>target</b> (<b>null</b>): A target to assign with the results of the transform. The assignment is done
+		by <b>$(target).html(result)</b>, so you can set <b>target</b> to a DOM element, a jQuery object, a string, 
+		etc.<br />
+		<br />
+	</li>
+	<li>
+		<b>dataTypeXML</b> (<b>false</b>): Use dataType = 'xml' in $.ajax calls? 'html' is used by default. This
+		option is disabled by default. Advantages of using it is that the XML objects are created by the browser
+		natively, which is probably faster than the JavaScript parser in AJAXSLT. Disadvantages are that Internet
+		Explorer will choke if the correct headers are not sent, and ofcourse there <i>may</i> be differences in
+		the parsing by the different browsers.<br />
+	</li>
+</ul>
+
+<b>Return values</b><br />
+The return value of the function can be either the transformed XML as a text string, <b>true</b> or <b>false</b>.
+
+<ul>
+	<li>
+		<b>string</b>: The operation was successful, and the value is the transformed XML.<br />
+		<br />
+	</li>
+	<li>
+		<b>true</b>: The operation has gone async and is working in the background. The callback, if any, will be called
+		when the operation is complete and the target, if any, assigned with the result of the transform. See <b>Async
+		vs. Sync</b> below for more information.<br />
+		<br />
+	</li>
+	<li>
+		<b>false</b>: An error has occured. Note that this may also be passed to the callback function.<br />
+	</li>
+</ul>
+
+<b>Async vs. Sync</b><br />
+The function running Async or Sync depends on a number of factors.<br />
+<br />
+By default, the function runs sync, and returns the transformation result. However, if any files need to be loaded
+through <b>$.ajax()</b> calls (which means that they are not in cache or caching is disabled) the function may go
+async. However, it will <i>only</i> go async if either a callback or target is provided. If no callback or target is
+provided, the <b>$.ajax()</b> calls will be made sync as well (which can make the browser temporarily unresponsive).<br />
+<br />
+Ofcourse, the callback function is called wether the function goes async or not.<br />
+
+<a name="reference_xslt_jq" />
+<h2>Reference - $(...).xslt(options)</h2>
+
+This function is practically the same as the <b>$.xslt(options)</b> function. The differences are that
+the <b>target</b> option is automatically set to the jQuery object and the function returns <b>this</b> to
+maintain chainability instead of <b>true</b>, <b>false</b>, or html.<br />
+
+<!-- Notes -->
+
+<a name="notes" />
+<h1>Notes</h1>
+AJAXSLT is a very nice library, but it does not implement XSLT in full. Most common things are supported
+though. It also breaks fairly easily and it can be hard to find where the problem is at.<br />
+<br />
+Ofcourse, the plugin has not changed the AJAXSLT code, so it's function names run the risk of conflicting
+with your own.<br />
+
+<!-- Laters -->
+
+<h1>Laters</h1>
+
+Laters and have fun,<br />
+- Chainfire
+
+</body>
+</html>

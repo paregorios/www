@@ -3,8 +3,172 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>paregorios</title>
+        <link rel="stylesheet" href="css/yui/reset-fonts-grids.css"
+            type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/page-structure.css"
+            type="text/css" media="screen" />
+        <link rel="alternate" type="application/rdf+xml"
+            title="Metadata" href="foaf.rdf" />
+        <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-xslt/jquery.xslt.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.contentwidget').hide();
+                $('#foaf').show();
+                $('#foaf').xslt({xmlUrl: 'foaf.rdf', xslUrl: 'xslt/foaf2html.xsl'});
+
+                $('.circle').click(function(){
+                    $('.contentwidget').hide();
+                });
+                $('#blogging').click(function(){
+                    $('#horothesia').show();
+                });
+                $('#who').click(function(){
+                    $('#foaf').show();
+                });
+                $('#digproj').click(function(){
+                    $('#isawor').show();
+                });
+                $('#texts').click(function(){
+                    $('#epidoc').show();
+                });
+                $('#what').click(function(){
+                    $('#how').show();
+                });
+                $('#footer').mouseover(function(){
+                    $('#footer').css({
+                        'opacity' : '1.0'
+                    });
+                });
+                $('#footer').mouseout(function(){
+                    $('#footer').css({
+                        'opacity' : '0.6'
+                    });
+                });
+            })                
+        </script>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div id="omnium" class="primary">
+            <div id="col1">
+                <h1>paregorios.org</h1>
+            </div>
+            <div id="col2">
+                <div id="content"><div class="circle" id="who">
+                    <div class="circlecontent">
+                        <h2>who?</h2>
+                        <p>This site belongs to Tom Elliott.</p>
+                    </div></div>
+                <div class="circle" id="what">
+                    <div class="circlecontent">
+                        <h2>what?</h2>
+                        <p>Click on any of the circles in the middle of the page to change the highlighted information in the right-hand margin.</p>
+                    </div>
+                </div>
+                <div class="circle" id="blogging">
+                    <div>
+                        <h2>blog</h2>
+                    </div></div>
+
+                <div class="circle" id="digproj">
+                    <div>
+                        <h2>isaw digital programs</h2>
+                        
+                    </div>
+                </div>
+                <div class="circle" id="texts">
+                    <div>
+                        <h2>texts</h2>
+                        
+                    </div>
+                </div>
+                
+                <!-- 
+                <div class="circle" id="paregorios">
+                    <div>
+                        <h2>paregorios?</h2>
+                    </div>
+                </div>
+                <div class="circle" id="epigraphy">
+                    <div>
+                        <h2>epigraphy</h2>
+                    </div>
+                </div>
+                <div class="circle" id="linkeddata">
+                    <div>
+                        <h2>linked data</h2>
+                    </div>
+                </div>
+                <div class="circle" id="prosopography">
+                    <div>
+                        <h2>prosopography</h2>
+                    </div>
+                </div>
+                <div class="circle" id="bbq">
+                    <div>
+                        <h2>bbq</h2>
+                    </div>
+                </div>
+                <div class="circle" id="papyrology">
+                    <div>
+                        <h2>papyrology</h2>
+                    </div>
+                </div>
+                <div class="circle" id="geography">
+                    <div>
+                        <h2>geography</h2>
+                    </div>
+                </div>
+                <div class="circle" id="feeds">
+                    <div>
+                        <h2>web feeds</h2>
+                    </div>
+                </div>
+                -->
+                </div>
+                <div id="footer">
+                    <p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/us/80x15.png" /></a><br />Unless otherwise indicated, all content on paregorios.org is copyright Tom Elliott and is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>.</p>
+                </div>
+            </div>
+            <div id="col3">
+                <div id="horothesia" class="contentwidget">
+                    <h2>Blogging</h2>
+                    <div class="widgetheader"><p>Recent posts from <a href="http://horothesia.blogspot.com">my personal blog</a> are listed
+                        below.</p>
+                    <p>I also sometimes blog at the <a
+                            href="http://ancientworldbloggers.blogspot.com/"
+                            >Ancient World Bloggers Group</a>, <a
+                            href="http://www.currentepigraphy.org/"
+                            >Current Epigraphy</a>, <a href="http://digitalpapyrology.blogspot.com">Digital Papyrology</a>, and the <a
+                            href="http://www.stoa.org">Stoa</a>.</p></div>
+                    <script src="http://feeds.feedburner.com/horothesia?format=sigpro" type="text/javascript"></script>
+                </div>
+                <div id="foaf" class="contentwidget">
+                    <p>loading foaf profile information ...</p>
+                </div>
+                <div id="isawor" class="contentwidget">
+                    <h2>Online resources from ISAW</h2>
+                    <p>The ISAW digital programs team produces a
+                        range of <a
+                            href="http://isaw.nyu.edu/online-resources"
+                            >online resources</a> for ancient
+                        studies.</p>
+                </div>
+                <div id="epidoc" class="contentwidget">
+                    <h2>Ancient texts</h2>
+                    <p>I'm one of the co-creators of the <a
+                        href="http://epidoc.sf.net">EpiDoc</a>
+                        customization of the Text Encoding
+                        Initiative: an XML specification for
+                        encoding ancient documents and texts.</p>
+                </div>
+                <div id="how" class="contentwidget">
+                    <h2>How</h2>
+                    <p>All the interaction layout in this page is powered by CSS and JQuery.</p>
+                    <p>Conversion of <a href="foaf.rdf">my FOAF profile</a> into HTML for display uses <a href="xslt/foaf2html.xsl">an XSLT stylesheet I wrote</a> and <a href="http://www.jongma.org/webtools/jquery/xslt/">Jorrit Jongma's jQuery Plugin for Google's AJAXSLT</a>.</p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
