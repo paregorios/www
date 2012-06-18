@@ -1,0 +1,27 @@
+<html>
+   <head>
+      <title>Liv[ - - - ?], T.</title>
+      <script src="http://isawnyu.github.com/awld-js/lib/requirejs/require.min.js"
+              type="text/javascript"></script>
+      <script src="http://isawnyu.github.com/awld-js/awld.js?autoinit" type="text/javascript"></script>
+   </head>
+   <body typeof="http://xmlns.com/foaf/0.1/Person"
+         resource="http://paregorios.org/demarc/people/liv-t">
+      <h1 property="http://www.w3.org/2000/01/rdf-schema#label">Liv[ - - - ?], T.</h1>
+      <p>URI for this person: 
+         <a href="http://paregorios.org/demarc/people/liv-t">http://paregorios.org/demarc/people/liv-t</a>
+      </p>
+      		
+      <p>Name: 
+         <span property="http://xmlns.com/foaf/0.1/name">Liv[ - - - ?], T.</span>
+      </p>
+      		
+      <p>Description: 
+         <span property="http://purl.org/dc/elements/1.1/description">Member of Nigrinus’ consilium. His name is variously restored as T. Liv[ius] or T.
+            Liv[ienus], but he cannot be securely identified.
+         </span>
+      </p>
+      		
+      	
+   </body>
+</html>

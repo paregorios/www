@@ -1,0 +1,26 @@
+<html>
+   <head>
+      <title>Caecilius Simplex, Cn.</title>
+      <script src="http://isawnyu.github.com/awld-js/lib/requirejs/require.min.js"
+              type="text/javascript"></script>
+      <script src="http://isawnyu.github.com/awld-js/awld.js?autoinit" type="text/javascript"></script>
+   </head>
+   <body typeof="http://xmlns.com/foaf/0.1/Person"
+         resource="http://paregorios.org/demarc/people/caecilius-simplex-cn">
+      <h1 property="http://www.w3.org/2000/01/rdf-schema#label">Caecilius Simplex, Cn.</h1>
+      <p>URI for this person: 
+         <a href="http://paregorios.org/demarc/people/caecilius-simplex-cn">http://paregorios.org/demarc/people/caecilius-simplex-cn</a>
+      </p>
+      		
+      <p>Name: 
+         <span property="http://xmlns.com/foaf/0.1/name">Caecilius Simplex, Cn.</span>
+      </p>
+      		
+      <p>Description: 
+         <span property="http://purl.org/dc/elements/1.1/description">Proconsul of Sardinia in AD 67/68; the first proconsul after Nero discontinued the
+            use of procurators as governors and returned the province to the Senate.
+         </span>
+      </p>
+      	
+   </body>
+</html>

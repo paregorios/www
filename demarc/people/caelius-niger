@@ -1,0 +1,26 @@
+<html>
+   <head>
+      <title>Caelius Niger</title>
+      <script src="http://isawnyu.github.com/awld-js/lib/requirejs/require.min.js"
+              type="text/javascript"></script>
+      <script src="http://isawnyu.github.com/awld-js/awld.js?autoinit" type="text/javascript"></script>
+   </head>
+   <body typeof="http://xmlns.com/foaf/0.1/Person"
+         resource="http://paregorios.org/demarc/people/caelius-niger">
+      <h1 property="http://www.w3.org/2000/01/rdf-schema#label">Caelius Niger</h1>
+      <p>URI for this person: 
+         <a href="http://paregorios.org/demarc/people/caelius-niger">http://paregorios.org/demarc/people/caelius-niger</a>
+      </p>
+      		
+      <p>Name: 
+         <span property="http://xmlns.com/foaf/0.1/name">Caelius Niger</span>
+      </p>
+      		
+      <p>Description: 
+         <span property="http://purl.org/dc/elements/1.1/description">Otherwise unknown individual who provided access to official documents stemming from
+            the resolution of a boundary dispute between Doliche and Elimeia in AD 101.
+         </span>
+      </p>
+      	
+   </body>
+</html>

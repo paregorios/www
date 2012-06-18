@@ -1,0 +1,26 @@
+<html>
+   <head>
+      <title>Iulius Romulus, M.</title>
+      <script src="http://isawnyu.github.com/awld-js/lib/requirejs/require.min.js"
+              type="text/javascript"></script>
+      <script src="http://isawnyu.github.com/awld-js/awld.js?autoinit" type="text/javascript"></script>
+   </head>
+   <body typeof="http://xmlns.com/foaf/0.1/Person"
+         resource="http://paregorios.org/demarc/people/iulius-romulus-m">
+      <h1 property="http://www.w3.org/2000/01/rdf-schema#label">Iulius Romulus, M.</h1>
+      <p>URI for this person: 
+         <a href="http://paregorios.org/demarc/people/iulius-romulus-m">http://paregorios.org/demarc/people/iulius-romulus-m</a>
+      </p>
+      		
+      <p>Name: 
+         <span property="http://xmlns.com/foaf/0.1/name">Iulius Romulus, M.</span>
+      </p>
+      		
+      <p>Description: 
+         <span property="http://purl.org/dc/elements/1.1/description">Styled legatus pro praetore (provinciae Sardiniae?) in AD 69, he served in the consilium
+            of the proconsul of Sardinia, L. Helvius Agrippa.
+         </span>
+      </p>
+      	
+   </body>
+</html>

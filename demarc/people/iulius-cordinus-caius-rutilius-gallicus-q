@@ -1,0 +1,29 @@
+<html>
+   <head>
+      <title>Iulius Cordinus Caius Rutilius Gallicus, Q.</title>
+      <script src="http://isawnyu.github.com/awld-js/lib/requirejs/require.min.js"
+              type="text/javascript"></script>
+      <script src="http://isawnyu.github.com/awld-js/awld.js?autoinit" type="text/javascript"></script>
+   </head>
+   <body typeof="http://xmlns.com/foaf/0.1/Person"
+         resource="http://paregorios.org/demarc/people/iulius-cordinus-caius-rutilius-gallicus-q">
+      <h1 property="http://www.w3.org/2000/01/rdf-schema#label">Iulius Cordinus Caius Rutilius Gallicus, Q.</h1>
+      <p>URI for this person: 
+         <a href="http://paregorios.org/demarc/people/iulius-cordinus-caius-rutilius-gallicus-q">http://paregorios.org/demarc/people/iulius-cordinus-caius-rutilius-gallicus-q</a>
+      </p>
+      		
+      <p>Name: 
+         <span property="http://xmlns.com/foaf/0.1/name">Iulius Cordinus Caius Rutilius Gallicus, Q.</span>
+      </p>
+      		
+      <p>Description: 
+         <span property="http://purl.org/dc/elements/1.1/description">Special imperial legate in the province of Africa, AD 74. There is significant scholarly
+            debate as to his role: a special mission (likely a census), or a provincial governorship
+            in lieu of a proconsul in order to reorganize the province. See cited literature for
+            details. The provincial fasti are far from complete: the nearest attested proconsuls
+            served in the years AD 72-73 and AD 77-78.
+         </span>
+      </p>
+      	
+   </body>
+</html>

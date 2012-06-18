@@ -1,0 +1,26 @@
+<html>
+   <head>
+      <title>Tullius Capito Pomponianus Plotius Firmus, C.</title>
+      <script src="http://isawnyu.github.com/awld-js/lib/requirejs/require.min.js"
+              type="text/javascript"></script>
+      <script src="http://isawnyu.github.com/awld-js/awld.js?autoinit" type="text/javascript"></script>
+   </head>
+   <body typeof="http://xmlns.com/foaf/0.1/Person"
+         resource="http://paregorios.org/demarc/people/tullius-capito-pomponianus-plotius-firmus-c">
+      <h1 property="http://www.w3.org/2000/01/rdf-schema#label">Tullius Capito Pomponianus Plotius Firmus, C.</h1>
+      <p>URI for this person: 
+         <a href="http://paregorios.org/demarc/people/tullius-capito-pomponianus-plotius-firmus-c">http://paregorios.org/demarc/people/tullius-capito-pomponianus-plotius-firmus-c</a>
+      </p>
+      		
+      <p>Name: 
+         <span property="http://xmlns.com/foaf/0.1/name">Tullius Capito Pomponianus Plotius Firmus, C.</span>
+      </p>
+      		
+      <p>Description: 
+         <span property="http://purl.org/dc/elements/1.1/description">Either a special legate of the emperor or legate in command of Legio III Augusta,
+            probably before holding the suffect consulate in AD 84.
+         </span>
+      </p>
+      	
+   </body>
+</html>
