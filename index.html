@@ -9,6 +9,8 @@
             type="text/css" media="screen" />
         <link rel="alternate" type="application/rdf+xml"
             title="Metadata" href="foaf.rdf" />
+        <script src='http://isawnyu.github.com/awld-js/lib/requirejs/require.min.js' type='text/javascript'></script>
+        <script src='http://isawnyu.github.com/awld-js/awld.js?autoinit' type='text/javascript'></script>
         <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
         <script type="text/javascript" src="js/jquery-xslt/jquery.xslt.js"></script>
 
@@ -36,6 +38,9 @@
                 $('#what').click(function(){
                     $('#how').show();
                 });
+                $('#linkeddata').click(function(){
+                    $('#lod').show();
+                });
                 $('#footer').mouseover(function(){
                     $('#footer').css({
                         'opacity' : '1.0'
@@ -56,35 +61,45 @@
             </div>
             <div id="col2">
                 <div id="content"><div class="circle" id="who">
-                    <div class="circlecontent">
-                        <h2>who?</h2>
-                        <p>This site belongs to Tom Elliott.</p>
-                    </div></div>
-                <div class="circle" id="what">
-                    <div class="circlecontent">
-                        <h2>what?</h2>
-                        <p>Click on any of the circles in the middle of the page to change the highlighted information in the right-hand margin.</p>
+                        <div class="circlecontent">
+                            <h2>who?</h2>
+                            <p>This site belongs to Tom Elliott.</p>
+                        </div></div>
+                    <div class="circle" id="what">
+                        <div class="circlecontent">
+                            <h2>what?</h2>
+                            <p>Click on any of the circles in the
+                                middle of the page to change the
+                                highlighted information in the
+                                right-hand margin.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="circle" id="blogging">
-                    <div>
-                        <h2>blog</h2>
-                    </div></div>
-
-                <div class="circle" id="digproj">
-                    <div>
-                        <h2>isaw digital programs</h2>
-                        
+                    <div class="circle" id="blogging">
+                        <div>
+                            <h2>blog</h2>
+                        </div></div>
+                    <div class="circle" id="texts">
+                        <div>
+                            <h2>texts</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="circle" id="texts">
-                    <div>
-                        <h2>texts</h2>
-                        
+                    <div class="circle" id="digproj">
+                        <div>
+                            <h2>isaw digital programs</h2>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- 
+                    <div class="circle" id="linkeddata">
+                        <div>
+                            <h2>linked data</h2>
+                        </div>
+                    </div>
+                    <div class="circle" id="github">
+                        <div>
+                            <a href="http://github.org/paregorios"><img src="images/octocat.png"/></a>
+                        </div>
+                    </div>
+                    
+                    <!-- 
                 <div class="circle" id="paregorios">
                     <div>
                         <h2>paregorios?</h2>
@@ -93,11 +108,6 @@
                 <div class="circle" id="epigraphy">
                     <div>
                         <h2>epigraphy</h2>
-                    </div>
-                </div>
-                <div class="circle" id="linkeddata">
-                    <div>
-                        <h2>linked data</h2>
                     </div>
                 </div>
                 <div class="circle" id="prosopography">
@@ -128,20 +138,36 @@
                 -->
                 </div>
                 <div id="footer">
-                    <p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/us/80x15.png" /></a><br />Unless otherwise indicated, all content on paregorios.org is copyright Tom Elliott and is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>.</p>
+                    <p><a rel="license"
+                            href="http://creativecommons.org/licenses/by/3.0/us/"
+                                ><img alt="Creative Commons License"
+                                style="border-width:0"
+                                src="http://i.creativecommons.org/l/by/3.0/us/80x15.png"
+                             /></a><br />Unless otherwise indicated,
+                        all content on paregorios.org is copyright Tom
+                        Elliott and is licensed under a <a
+                            rel="license"
+                            href="http://creativecommons.org/licenses/by/3.0/us/"
+                            >Creative Commons Attribution 3.0 United
+                            States License</a>.</p>
                 </div>
             </div>
             <div id="col3">
                 <div id="horothesia" class="contentwidget">
                     <h2>Blogging</h2>
-                    <div class="widgetheader"><p>Recent posts from <a href="http://horothesia.blogspot.com">my personal blog</a> are listed
-                        below.</p>
-                    <p>I also sometimes blog at the <a
-                            href="http://ancientworldbloggers.blogspot.com/"
-                            >Ancient World Bloggers Group</a>, <a
-                            href="http://www.currentepigraphy.org/"
-                            >Current Epigraphy</a>, <a href="http://digitalpapyrology.blogspot.com">Digital Papyrology</a>, and the <a
-                            href="http://www.stoa.org">Stoa</a>.</p></div>
+                    <div class="widgetheader"><p>Recent posts from <a
+                                href="http://horothesia.blogspot.com"
+                                >my personal blog</a> are listed
+                            below.</p>
+                        <p>I also sometimes blog at the <a
+                                href="http://ancientworldbloggers.blogspot.com/"
+                                >Ancient World Bloggers Group</a>, <a
+                                href="http://www.currentepigraphy.org/"
+                                >Current Epigraphy</a>, <a
+                                href="http://digitalpapyrology.blogspot.com"
+                                >Digital Papyrology</a>, and the <a
+                                href="http://www.stoa.org"
+                            >Stoa</a>.</p></div>
                     <script src="http://feeds.feedburner.com/horothesia?format=sigpro" type="text/javascript"></script>
                 </div>
                 <div id="foaf" class="contentwidget">
@@ -149,8 +175,8 @@
                 </div>
                 <div id="isawor" class="contentwidget">
                     <h2>Online resources from ISAW</h2>
-                    <p>The ISAW digital programs team produces a
-                        range of <a
+                    <p>The ISAW digital programs team produces a range
+                        of <a
                             href="http://isaw.nyu.edu/online-resources"
                             >online resources</a> for ancient
                         studies.</p>
@@ -158,16 +184,31 @@
                 <div id="epidoc" class="contentwidget">
                     <h2>Ancient texts</h2>
                     <p>I'm one of the co-creators of the <a
-                        href="http://epidoc.sf.net">EpiDoc</a>
-                        customization of the Text Encoding
-                        Initiative: an XML specification for
-                        encoding ancient documents and texts.</p>
+                            href="http://epidoc.sf.net">EpiDoc</a>
+                        customization of the Text Encoding Initiative:
+                        an XML specification for encoding ancient
+                        documents and texts.</p>
                 </div>
                 <div id="how" class="contentwidget">
                     <h2>How</h2>
-                    <p>All the interaction layout in this page is powered by CSS and JQuery.</p>
-                    <p>Conversion of <a href="foaf.rdf">my FOAF profile</a> into HTML for display uses <a href="xslt/foaf2html.xsl">an XSLT stylesheet I wrote</a> and <a href="http://www.jongma.org/webtools/jquery/xslt/">Jorrit Jongma's jQuery Plugin for Google's AJAXSLT</a>.</p>
+                    <p>All the interaction layout in this page is
+                        powered by CSS and JQuery.</p>
+                    <p>Conversion of <a href="foaf.rdf">my FOAF
+                            profile</a> into HTML for display uses <a
+                            href="xslt/foaf2html.xsl">an XSLT
+                            stylesheet I wrote</a> and <a
+                            href="http://www.jongma.org/webtools/jquery/xslt/"
+                            >Jorrit Jongma's jQuery Plugin for
+                            Google's AJAXSLT</a>.</p>
                 </div>
+                <div id="lod" class="contentwidget">
+                    <h2>Linked data</h2>
+                    <p>I have published the following linked open datasets:</p>
+                    <ul>
+                        <li>People from my dissertation: <a href="demarc/people">demarc/people</a></li>
+                    </ul>
+                </div>
+                
             </div>
         </div>
     </body>
